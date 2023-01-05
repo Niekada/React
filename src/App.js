@@ -1,25 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Logo from "./Components/Logo";
+import NavigationBar from './Components/NavigationBar';
+import FuncButton from './Components/FuncButton';
+import FuncDiv from './Components/FuncDiv';
+import ClassButton from './Components/ClassButton';
+import ClassDiv from './Components/ClassDiv';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo />
+      <NavigationBar />
+      <FuncButton title="Spausk mane" color="red"/>
+      <FuncButton title="Nespausk prašau"/>
+      <FuncDiv 
+        title="Kažkas" 
+        subtitle="Kažkas kito" 
+        buttonText="Kažkoks"/>
+      <FuncDiv 
+        itle="Kitkas" 
+        subtitle="Kitaip" 
+        buttonText="Kitoks" 
+        color="blue"/>
+      <ClassButton title="Klasinis mygtukas"/>
+      <ClassDiv 
+          title="KlasinisDiv" 
+          subtitle="KlasikinisDiv" 
+          buttonText="KlasinisMygtukas"/>
     </div>
   );
-}
+};
 
 export default App;
